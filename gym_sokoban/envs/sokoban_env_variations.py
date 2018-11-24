@@ -14,6 +14,20 @@ class SokobanEnv1(SokobanEnv):
         )
 
 
+class SokobanEnv01(SokobanEnv1):
+    def step(self, action):
+        observation, reward, done, info = super(SokobanEnv01, self).step(action)
+        if done:
+            if reward > 0:
+                reward = 1
+            else:
+                reward = -1
+        else:
+            reward = 0
+
+        return observation, reward, done, info
+
+
 class SokobanEnv2(SokobanEnv):
     metadata = {
         'render.modes': ['human', 'rgb_array'],

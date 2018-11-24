@@ -5,6 +5,11 @@
     "max_episode_steps": 200
   },
   {
+    "id": "Sokoban-v01",
+    "entry_point": "gym_sokoban.envs:SokobanEnv01",
+    "max_episode_steps": 200
+  },
+  {
     "id": "Sokoban-v1",
     "entry_point": "gym_sokoban.envs:SokobanEnv",
     "max_episode_steps": 250
